@@ -1,0 +1,122 @@
+.about {
+    position: relative;
+    padding-top: 13rem;
+    @include tablet {
+        padding-top: 1rem;
+    }
+    .avatar {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 18rem;
+        height: 18rem;
+        background: $light-gray;
+        z-index: -1;
+        @include tablet {
+            right: unset;
+            width: 20rem;
+            height: 20rem;
+            transform: translate(0, 35px);
+        }
+        @include desktop {
+            width: 23rem;
+            height: 23rem;
+            transform: translate(0, 80px);
+        }
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .description {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @include tablet {
+            width: 100%;
+        }
+        .title {
+            line-height: 1rem;
+        }
+        >div {
+            margin: 0.5rem 0 1rem 0;
+        }
+        .name {
+            margin-top: 0;
+        }
+        &__detail {
+            div {
+                margin: 0.5rem auto 1rem 0;
+            }
+            @include tablet {
+                width: 50%;
+            }
+            @include desktop {
+                width: 58%;
+            }
+        }
+    }
+    .career {
+        margin: 2rem auto;
+        @include tablet {
+            margin-top: 10rem;
+        }
+        @include desktop {
+            margin-top: 12rem;
+        }
+        &__card {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            border-top: 1px solid #000;
+            border-bottom: 1px solid #000;
+            padding: 0.5rem 0;
+            @include tablet {
+                border-top: 2px solid #000;
+                border-bottom: 2px solid #000;
+            }
+            @include desktop {
+                padding: 1.5rem 0;
+            }
+            span {
+                font-weight: 400;
+            }
+        }
+    }
+    .title {
+        width: 100%;
+        font-size: 24px;
+        line-height: 2rem;
+        @include desktop {
+            font-size: 30px;
+            line-height: 3rem;
+        }
+    }
+    h2 {
+        font-size: 30px;
+        font-weight: 700;
+        @include tablet {
+            font-size: 35px;
+        }
+        @include desktop {
+            font-size: 60px;
+        }
+    }
+    h3 {
+        @include tablet {
+            font-size: 30px;
+        }
+    }
+    p {
+        @include tablet {
+            font-size: 18px;
+        }
+        @include desktop {
+            font-size: 25px;
+        }
+        &>span {
+            font-weight: 500;
+            font-style: italic;
+        }
+    }
+}

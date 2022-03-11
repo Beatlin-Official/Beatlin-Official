@@ -1,0 +1,75 @@
+body {
+    background-color: $body-bg;
+}
+
+.main {
+    @include tablet {
+        margin-top: 8rem;
+    }
+    &__language__ch {
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 80px;
+        @include tablet {
+            font-size: 75px;
+            line-height: 90px;
+        }
+        @include desktop {
+            font-size: 80px;
+            line-height: 100px;
+        }
+    }
+    &__language__en {
+        margin-top: 20px;
+        font-weight: 400;
+        font-size: 25px;
+        font-style: italic;
+        line-height: 42px;
+        @include tablet {
+            font-size: 35px;
+            line-height: 50px;
+        }
+        @include desktop {
+            font-weight: 500;
+            font-size: 96px;
+            line-height: 100px;
+        }
+    }
+}
+
+.nav {
+    margin-top: 50px;
+    padding-bottom: 20px;
+    .list__category {
+        display: grid;
+        grid-auto-flow: column;
+        grid-gap: 1rem;
+        justify-content: space-between;
+        font-size: 20px;
+        font-weight: 700;
+        color: #000000;
+        &__link {
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                border-bottom: 2px solid black;
+                top: 50;
+                left: 0;
+                bottom: 50%;
+                right: 0;
+                transition: transform 0.3s ease-out;
+                transform: scale(0, 1);
+            }
+            &:hover::after {
+                transform: scale(1.05, 1);
+            }
+            a {
+                padding: 10px;
+            }
+        }
+    }
+    @include tablet {
+        display: none;
+    }
+}

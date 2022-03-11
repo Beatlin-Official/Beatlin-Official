@@ -1,0 +1,123 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 25px 40px;
+    transition: transform 0.3s ease-out;
+    transform: scale(1, 1);
+    z-index: 998;
+    backdrop-filter: blur(10px);
+    &__home {
+        display: flex;
+        width: 3.4rem;
+        height: 100%;
+    }
+    &__toggle {
+        display: flex;
+        width: auto;
+        height: 100%;
+        cursor: pointer;
+        @include tablet {
+            display: none;
+        }
+    }
+}
+
+.navbar__menu {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px 40px 250px;
+    transition: transform 0.3s ease-out;
+    transform: scale(0, 1);
+    z-index: 999;
+    @include tablet {
+        all: unset;
+    }
+    .navbar__home--white,
+    .navbar__close {
+        display: flex;
+        width: auto;
+        height: 100%;
+        cursor: pointer;
+        @include tablet {
+            display: none;
+        }
+    }
+    .navbar__list--wrapper {
+        width: 100%;
+        @include tablet {
+            position: fixed;
+            top: 0;
+            right: 6%;
+            width: 60%;
+            margin-top: 2rem;
+            z-index: 999;
+        }
+    }
+    .navbar__list {
+        display: grid;
+        grid-gap: 3rem;
+        margin-top: 165px;
+        @include tablet {
+            grid-template-rows: auto;
+            grid-auto-columns: 155px;
+            grid-auto-flow: column;
+            grid-gap: 0.2rem;
+            margin-top: 0;
+            justify-content: end;
+        }
+        &__link {
+            position: relative;
+            font-weight: 700;
+            font-size: 4.5rem;
+            color: rgb(255, 255, 255);
+            @include tablet {
+                font-weight: 600;
+                font-size: 20px;
+                color: $black;
+                text-align: center;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                border-bottom: 6px solid rgb(255, 255, 255);
+                top: 50;
+                left: 0;
+                bottom: 50%;
+                right: 0;
+                transition: transform 0.3s ease-out;
+                transform: scale(0, 1);
+                @include tablet {
+                    border-bottom: 2px solid $black;
+                }
+            }
+            &:hover::after {
+                transform: scale(1.05, 1);
+            }
+            a {
+                padding: 10px 5px;
+            }
+        }
+    }
+}
+
+// show menu
+.show {
+    transform: scale(1, 1);
+}
+
+// hide navbar
+.hide {
+    top: -100%;
+    transform: scale(0, 1);
+}
