@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B0 Design Portfolio</title>
+    <link rel="shortcut icon" href="./image/b0-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="dist/style/main.min.css">
+</head>
+
+<body id="body" class="body">
+    <header>
+        <nav class="navbar" id="navbar">
+            <div class="navbar__home">
+                <a href="index.html"><img src="image/b0-logo.png" class="navbar__home__img"></a>
+            </div>
+            <div class="navbar__toggle" id="navbar-toggle">
+                <img src="image/hamburger.png">
+            </div>
+        </nav>
+        <nav class="navbar__menu" id="navbar-menu">
+            <div class="navbar__home--white">
+                <a href="index.html"><img src="image/b0-logo-white.png"></a>
+            </div>
+            <div class="navbar__close" id="navbar-close">
+                <img src="image/delete.png">
+            </div>
+            <div class="navbar__list--wrapper">
+                <ul class="navbar__list">
+                    <li class="navbar__list__link"><a href="projects.html">PROJECTS</a></li>
+                    <li class="navbar__list__link"><a href="about.html">ABOUT</a></li>
+                    <li class="navbar__list__link"><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section id="section" class="projects container">
+        <h1 class="title">Front-end</h1>
+
+        <div class="frontEnd__card__wrapper">
+            <a href="https://www.aquasoluble.com/" target="_blank">
+                <div class="card">
+                    <img class="card__img" src="./image/frontEnd/aquasoluble.gif" alt="">
+                    <div class="project__content">
+                        <h2 class="project__title">Aquasoluble Web</h2>
+                        <h3 class="project__description">使用技術 : PHP, Bootstrap</h3>
+                        <p>使用PHPMailer達成站內寄信功能，另外使用Bootstrap組建響應式畫面。</p>
+                        <div class="link-arrow">
+                            <p>前往網站<i class="arrow right"></i></p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="frontEnd__card__wrapper">
+            <a href="https://beatlin-official.github.io/Connect-four/" target="_blank">
+                <div class="card">
+                    <img class="card__img" src="./image/frontEnd/connectfour.gif" alt="">
+                    <div class="project__content">
+                        <h2 class="project__title">Connect Four</h2>
+                        <h3 class="project__description">使用技術 : JS, SCSS </h3>
+                        <p>透過製作遊戲中的如何去判斷輸贏，去運用到JS中陣列、事件觸發與傳遞。</p>
+                        <div class="link-arrow">
+                            <p>前往網站<i class="arrow right"></i></p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="frontEnd__card__wrapper">
+            <a href="https://beatlin-official.github.io/Memory-game/" target="_blank">
+                <div class="card">
+                    <img class="card__img" src="./image/frontEnd/pokermemory.gif" alt="">
+                    <div class="project__content">
+                        <h2 class="project__title">Poker Memory</h2>
+                        <h3 class="project__description">使用技術 : JS, SCSS </h3>
+                        <p>運用MVC來模組化程式 雖不影響使用者體驗，不過運用模組化在將來維護上會更加直觀與效率，避免因為局部修改而造成滾動式的修改。
+                        </p>
+                        <div class="link-arrow">
+                            <p>前往網站<i class="arrow right"></i></p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </section>
+    <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

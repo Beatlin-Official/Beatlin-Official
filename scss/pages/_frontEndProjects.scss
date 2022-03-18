@@ -1,0 +1,85 @@
+.projects {
+    .title {
+        font-size: 36px;
+        @include desktop {
+            font-size: 50px;
+        }
+    }
+}
+
+.frontEnd__card__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    @include tablet {
+        z-index: -1;
+    }
+    .card {
+        position: relative;
+        display: grid;
+        margin: 20px auto;
+        max-width: 800px;
+        @include tablet {
+            grid-auto-flow: column;
+            grid-auto-columns: 50%;
+            grid-template-rows: 100%;
+        }
+        @include desktop {
+            grid-template-rows: 250px;
+        }
+        .card__img {
+            height: 100%;
+            object-fit: cover;
+            transition: .5s;
+            z-index: -1;
+        }
+        .project__content {
+            margin: 1rem 0;
+            @include tablet {
+                margin: 0 1rem;
+            }
+        }
+        .project__title {
+            font-size: 26px;
+            @include tablet {
+                font-size: 36px;
+            }
+        }
+        .project__description {
+            position: relative;
+            margin: 0.5rem 0;
+            padding-top: 0.5rem;
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0.5rem;
+                border-top: 0.5px solid #000;
+            }
+        }
+        &:hover .card__img {
+            transform: scale(1.2);
+        }
+        p {
+            letter-spacing: 1.2px;
+            color: $deep-gray;
+        }
+        .link-arrow {
+            margin-top: 10px;
+            text-align: right;
+            vertical-align: bottom;
+            .arrow {
+                border: solid black;
+                border-width: 0 1px 1px 0;
+                display: inline-block;
+                padding: 5px;
+            }
+        }
+    }
+}
+
+.deepgray {
+    background-color: $deep-gray;
+}

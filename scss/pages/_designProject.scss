@@ -1,0 +1,140 @@
+.project {
+    margin-top: 0;
+    max-width: 920px;
+    &__img01 {
+        width: 100vw;
+        height: 510px;
+        object-fit: cover;
+        background: $light-gray;
+    }
+    &__label {
+        position: relative;
+        margin-top: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1rem;
+        @include tablet {
+            justify-content: end;
+            width: 100%;
+        }
+        &__clent::before {
+            @include tablet {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                height: 2px;
+                width: 50%;
+                background-color: #000;
+                z-index: -1;
+            }
+        }
+        &__clent,
+        &__role,
+        &__year {
+            @include tablet {
+                padding-left: 2rem;
+                background-color: #fff;
+            }
+        }
+    }
+    &__img02,
+    &__img03,
+    &__img04,
+    &__img05,
+    &__img06,
+    &__img07,
+    &__img08 {
+        margin: 2.5rem auto;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background: $light-gray;
+    }
+    &__content,
+    &__challenge,
+    &__team {
+        margin: 1.5rem auto;
+    }
+    .next__project {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+        margin: 1.5rem auto;
+        @include tablet {
+            border-top: 2px solid #000;
+            border-bottom: 2px solid #000;
+        }
+        h1 {
+            margin: 1rem auto;
+        }
+    }
+    h1 {
+        margin-top: 1.5rem;
+        font-size: 36px;
+        @include tablet {
+            margin-top: 2.5rem;
+            font-size: 45px;
+        }
+    }
+    h2 {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 2.5rem;
+    }
+    h3 {
+        margin-top: 1rem;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 2rem;
+        letter-spacing: 1px;
+    }
+    h4 {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.5rem;
+    }
+}
+
+iframe {
+    width: 100%;
+    height: 46vw;
+}
+
+img {
+    height: auto;
+    width: 100%;
+}
+
+.full-width {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+.grid-layout {
+    width: 100%;
+    margin: 2.5rem auto;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat( auto-fit, minmax( 150px, 1fr));
+}
+
+.border-left {
+    border-left: 3px solid $black;
+    padding-left: 20px;
+}
+
+.white {
+    background-color: white;
+}
+
+.deep-gray {
+    background-color: $deep-gray;
+}
